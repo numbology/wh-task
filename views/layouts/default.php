@@ -4,18 +4,25 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-sm bg-dark">
-            <a class="navbar-brand" href="/workhorse-task/">Home</a>
-            <ul class="navbar-nav">
+            <a class="navbar-brand" href="/">Home</a>
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/workhorse-task/views/register.php">REGISTER</a>
+                    <a class="nav-link" href="/user/register/">REGISTER</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/workhorse-task/views/login.php">LOGIN</a>
+                    <a class="nav-link" href="/user/login/">LOGIN</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/workhorse-task/views/report.php">USER LIST</a>
+                    <a class="nav-link" href="/user/">USER LIST</a>
                 </li>
             </ul>
+            <?php if (isset($_SESSION['logged_in'])) { ?>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="" href="/user/logout/">Sign Out</a>
+                    </li>
+                </ul>
+            <?php } ?>
         </nav>
         <br />
 
